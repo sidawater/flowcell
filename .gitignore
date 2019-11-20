@@ -1,0 +1,15 @@
+MANIFEST
+dist
+__pycache__
+*.pyc
+.egg-info
+build/
+
+.git
+.idea
+
+logs
+*.log
+
+local_test.py
+
