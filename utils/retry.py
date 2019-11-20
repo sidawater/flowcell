@@ -3,7 +3,7 @@ import types
 from functools import wraps
 
 
-class DcRetry(object):
+class Retry(object):
     """
     重试装饰器
     """
@@ -109,17 +109,7 @@ class DcRetry(object):
             return types.MethodType(self, instance)
 
 
-class BaseManager(object):
-    """
-    基础 manager
-    """
-    pass
-
-
-# if __name__ == '__main__':
-
-
-def dc_retry(retry=1, on_retry=None, on_exit=None, trace_with=None, **kwargs):
+def retry(retry=1, on_retry=None, on_exit=None, trace_with=None, **kwargs):
 
     def wrapper(func):
         # nonlocal kwargs
